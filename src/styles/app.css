@@ -1,0 +1,23 @@
+
+main{
+    color: black;
+}
+
+header.header{
+
+    background-color: green;
+    .Grid{
+        display:'grid';
+        grid-template-columns:"20% 60% 20%"
+    }
+
+}
+
+header{
+    padding: '150px';
+    font-size: large;
+}
+
+div {
+    font-family: "Quicksand"
+}
