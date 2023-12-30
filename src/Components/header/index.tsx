@@ -27,7 +27,7 @@ export default function Header() {
                 </div>
 
                 <div id="header_top_right">
-                  <div className='icone_bar_right'>text</div>
+                  <div className='icone_bar_right'>O.W.9</div>
                 </div>
               </div>
             </div>
