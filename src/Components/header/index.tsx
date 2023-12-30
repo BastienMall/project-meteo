@@ -4,50 +4,53 @@ export default function Header() {
 
     return (
       <>
-        <header>
-          <div style={{display:'grid', gridTemplateColumns:"20% 60% 20%" }}>
-              <div ></div>
-              <div style={{backgroundColor:'white', display:'flex'}}>
-                <img src='../Rep_Public_logo.png' height={'120px'} width={'120px'}/>
-                <img src='../meteo_france_logo_2.png' height={'80px'} width={'90px'} style={{scale:'0.85'}} />
-              </div>
-              <div ></div>
-          </div>
+        <header id="header">
+          <section id='header_top'>
+            <div className="container">
 
-          <div style={{display:'grid', gridTemplateColumns:"20% 60% 20%" , backgroundColor:"white", position:"initial"}}>
-              <div ></div>
-              <div style={{ display:'flex'}}>
-                <div style={{border:"1px solid", margin:"5px", color:"#003661", fontSize:"12px" , fontWeight:"800"}}>
-                  PREVISIONS
+              <div className="row">
+                <div id="header_top_left">
+                  <div style={{backgroundColor:'white', display:'flex'}}>
+                      <img src='../Rep_Public_logo.png' height={'120px'} width={'120px'}/>
+                    <img src='../meteo_france_logo_2.png' height={'120px'} width={'120px'} style={{scale:'0.85'}} />
+                  </div>
                 </div>
-                <div style={{border:"1px solid", margin:"5px", color:"#003661", fontSize:"12px" , fontWeight:"800"}}>
-                  METEO MARINE
-                </div>
-                <div style={{border:"1px solid", margin:"5px", color:"#003661", fontSize:"12px" , fontWeight:"800"}}>
-                  METEO MONTAGNE
-                </div>
-                <div style={{border:"1px solid", margin:"5px", color:"#003661", fontSize:"12px" , fontWeight:"800"}}>
-                  CLIMAT
-                </div>
-                <div style={{border:"1px solid", margin:"5px", color:"#003661", fontSize:"12px" , fontWeight:"800"}}>
-                  ACTU & DOSSIERS
-                </div>
-                <div style={{border:"1px solid", margin:"5px", color:"#003661", fontSize:"12px" , fontWeight:"800"}}>
-                  NOS SERVICES
-                </div>
-              </div>
-              <div ></div>
-          </div>
 
-          <div style={{display:'grid', gridTemplateColumns:"20% 60% 20%" , backgroundColor:"#036ba1"}}>
-              <div ></div>
-              <div style={{ display:'flex'}}>
-                <div style={{border:"1px solid", margin:"5px" }}>
-                  <text color='white'> Ajouter une ville </text>
+                <div id="header_top_middle">
+                  <div id="barre_search">
+                    <form className='recherche'>
+                      
+                      <input type="text" id='barre_search_input' placeholder='Rechercher une ville' />
+                      <button type='submit' title='lancer la recherche' aria-label='lancer la recherche'><i className="fa fa-search"></i></button>
+                    </form>
+                  </div>
+                </div>
+
+                <div id="header_top_right">
+                  <div className='icone_bar_right'>text</div>
                 </div>
               </div>
-              <div ></div>
-          </div>
+            </div>
+          </section>
+
+          <section id='header_bottom'>
+            <div className="container">
+              <div className="row">
+                <div id="barre-favoris">
+                  <ul id='barre-favoris-list'>
+                    <li className='last'>
+                      <div id="add-favorite">
+                        <div className="autocomplete">
+                          <span>Ajouter une ville</span>
+                          <button>+</button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
         </header>
 
         
