@@ -1,7 +1,7 @@
-import PageAccueil from '@/Components/PageAccueil'
-import Head from 'next/head'
-import axios from 'axios'
-import { useState } from 'react'
+
+import PageAccueil from "@/Components/PageAccueil"
+import Head from "next/head"
+import React from "react"
 
 
 export default function Home() {
