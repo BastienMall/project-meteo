@@ -4,17 +4,7 @@ export default function Footer() {
 
     return (
       <>
-        <div style={{display:'grid', gridTemplateColumns:"20% 60% 20%" , backgroundColor:"#0076c9", padding:"2%"}}>
-              <div ></div>
-              <div style={{ display:'flex'}}>
-                <div style={{color:"white" }}>
-                  <text style={{ justifyItems:"center"}}>
-                    Top 20 des villes les plus consultés
-                  </text>
-                </div>
-              </div>
-              <div ></div>
-          </div>
+       
 
         <div style={{backgroundColor:'white', display:'flex', padding:'1%', justifyContent:'center'}} >
           <img src='../Rep_Public_logo.png' height={'120px'} width={'120px'}/>
