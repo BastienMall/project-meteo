@@ -21,7 +21,7 @@ const Map: React.FC = () => {
 
 
   const cities = [
-    'Paris', 'Marseille', 'Lyon',  'Strasbourg', 'Montpellier', 'Bordeaux', 'Lille',
+    'Paris', 'Marseille', 'Lyon',  'Strasbourg', 'Montpellier', 'Bordeaux', 'Lille', 'Toulouse', 'Brest',
      'Ajaccio', 'Nice', 'Gap', 'Montélimar', 'Perpignan', 'Tarbes', 'Biarritz', 'Vichy', 'Bourg-Saint-Maurice', 'Bourges', 'Tours', 'Rennes',  
      'Nantes', 'La Rochelle', 'Chalon-sur-Saône', 'Chaumont', 'Rouen', 'Cherbourg-Octeville', 'Amiens', 'Metz', 'Reims', 'Brest', 'Alençon', 'Limoges', 'Vichy',
      'Aurillac', 'Auxerre'
@@ -148,7 +148,7 @@ const Map: React.FC = () => {
   const handleMarkerMouseOut = () => {
     setTimeout(() => {
       setSelectedMarker(null);
-    }, 1000); // Ajouter un délai de 300 millisecondes avant de fermer l'infobulle
+    }, 4000); // Ajouter un délai de 300 millisecondes avant de fermer l'infobulle
   };
 
   const toggleDataDisplay = () => {
@@ -158,7 +158,7 @@ const Map: React.FC = () => {
 
   return (
     <LoadScript googleMapsApiKey="AIzaSyAwjPsWJyl34bEJdPQ9HhHXbWmy1fzvtds">
-      <GoogleMap mapContainerStyle={mapStyles} zoom={8} center={{ lat: 46.603354, lng: 1.888334 }} options={mapOptions}>
+      <GoogleMap mapContainerStyle={mapStyles} zoom={5.5} center={{ lat: 46.603354, lng: 1.888334 }} options={mapOptions}>
 
       {weatherData.map((data) => (
           <Marker
@@ -166,7 +166,7 @@ const Map: React.FC = () => {
             position={{ lat: data.lat, lng: data.lng }}
             icon={{
               url: data.icon,
-              scaledSize: new window.google.maps.Size(30, 30),
+              scaledSize: new window.google.maps.Size(55, 55),
             }}
             onMouseOver={() => handleMarkerMouseOver(data)}
             onMouseOut={handleMarkerMouseOut}
@@ -180,9 +180,9 @@ const Map: React.FC = () => {
             position={{ lat: selectedMarker.lat, lng: selectedMarker.lng }}
             onCloseClick={handleMarkerMouseOut}
           >
-            <div style={{ padding: '10px', textAlign: 'center' }}>
+            <div style={{ padding: '10px', textAlign: 'center', width:'1(0px' }}>
               <p style={{ fontSize: '20px', fontWeight: 'bold', margin: '5px 0' }} >{selectedMarker.city}</p>
-              <img src={selectedMarker.icon} alt="Weather Icon" />
+              <img style={{ height:'60px', width:'60px', margin:'auto'}} src={selectedMarker.icon} alt="Weather Icon" />
               <p style={{ fontSize: '16px' }}>Temperature: {selectedMarker.temperature}°C</p>
               <p style={{ fontSize: '16px' }} >{selectedMarker.description}</p>
             </div>

@@ -56,7 +56,7 @@ const Weather = () => {
           // ARRAY OF OBJ
           setShowWeather([
             {
-              type: "Not Found",
+              type: "J'ai rien trouvé :)",
               img: "https://cdn-icons-png.flaticon.com/512/4275/4275497.png",
             },
           ]);
@@ -77,25 +77,25 @@ const Weather = () => {
   };
 
   return (
-    <div className="bg-gray-800 h-screen grid place-items-center" style={{ height:'250px'}}>
+    <div className="right-rectangle" style={{ borderRadius:'10px', height:'250px', backgroundColor:'#e8e8e8', display:'grid', gridTemplateColumns:'20% 60% 20%', padding:'2%'}}>
       <div >
         <div >
-          <span style={{width:'275px', color:'white',fontSize:'18px',fontWeight:'600',border:'solid 1px black', display:'inline-block', marginLeft:'50%', marginBottom:'25px'}}>
+          <span style={{width:'275px', color:'#145e9a',fontSize:'18px',fontWeight:'600',border:'solid 1px #145e9a', display:'inline-block', marginLeft:'50%', marginBottom:'25px'}}>
             Recherchez la météo d'une ville
           </span>
           <input
             type="text"
             ref={inputRef}
-            placeholder="Enter Your Location"
+            placeholder="Rechercher une ville"
             className="text-xl border-b
           p-1 border-gray-200 font-semibold uppercase flex-1"
-          style={{marginLeft:"100%"}}
+          style={{marginLeft:"80%"}}
           />
           <button onClick={fetchWeather}>
             <img
               src="https://cdn-icons-png.flaticon.com/512/758/758651.png"
               alt="..."
-              style={{height:'50px', width:'50px'}}
+              style={{height:'20px', width:'20px'}}
             />
           </button>
         </div>
