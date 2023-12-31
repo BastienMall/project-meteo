@@ -17,11 +17,14 @@ interface WeatherData {
 const Map: React.FC = () => {
   const [weatherData, setWeatherData] = useState<WeatherData[]>([]);
   const [selectedMarker, setSelectedMarker] = useState<WeatherData | null>(null);
+  const [showCurrentData, setShowCurrentData] = useState(true);
+
 
   const cities = [
     'Paris', 'Marseille', 'Lyon',  'Strasbourg', 'Montpellier', 'Bordeaux', 'Lille',
      'Ajaccio', 'Nice', 'Gap', 'Montélimar', 'Perpignan', 'Tarbes', 'Biarritz', 'Vichy', 'Bourg-Saint-Maurice', 'Bourges', 'Tours', 'Rennes',  
-     'Nantes', 'La Rochelle', 'Chalon-sur-Saône', 'Chaumont', 'Rouen', 'Cherbourg-Octeville', 'Amiens', 'Metz', 'Reims', 'Brest', 'Alençon'
+     'Nantes', 'La Rochelle', 'Chalon-sur-Saône', 'Chaumont', 'Rouen', 'Cherbourg-Octeville', 'Amiens', 'Metz', 'Reims', 'Brest', 'Alençon', 'Limoges', 'Vichy',
+     'Aurillac', 'Auxerre'
 
     // Ajoutez d'autres villes par région selon vos besoins
   ];
@@ -29,9 +32,11 @@ const Map: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       const apiKey = '1d87e5cbc319844198d49b6038bdb380';
+      
       const promises = cities.map(async (city) => {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=fr&appid=${apiKey}`);
         const data = await response.json();
+        
         return {
           city,
           lat: data.coord.lat,
@@ -76,10 +81,10 @@ const Map: React.FC = () => {
   ];
 
   const mapStyles: React.CSSProperties = {
-    height: '100vh',
-    width: '70%',
+    height: '80vh',
+    width: '40%',
     margin: 'auto', // Centre la carte horizontalement
-    marginTop : '3%',
+    marginTop : '2%',
     marginBottom : '3%',
   };
 
@@ -126,8 +131,9 @@ const Map: React.FC = () => {
           { visibility: 'off' }, // Masquer les routes
         ],
       },
-     
     ],
+    streetViewControl: false, // Désactive le contrôle Pegman (Street View)
+    mapTypeControl: false, // Désactive le contrôle de type de carte (Satellite, etc.)
   };
 
   const handleMarkerMouseOver  = (markerData: WeatherData) => {
@@ -142,11 +148,15 @@ const Map: React.FC = () => {
       setSelectedMarker(null);
     }, 1000); // Ajouter un délai de 300 millisecondes avant de fermer l'infobulle
   };
+
+  const toggleDataDisplay = () => {
+    setShowCurrentData((prev) => !prev);
+  };
   
 
   return (
     <LoadScript googleMapsApiKey="AIzaSyAwjPsWJyl34bEJdPQ9HhHXbWmy1fzvtds">
-      <GoogleMap mapContainerStyle={mapStyles} zoom={6} center={{ lat: 46.603354, lng: 1.888334 }} options={mapOptions}>
+      <GoogleMap mapContainerStyle={mapStyles} zoom={5} center={{ lat: 46.603354, lng: 1.888334 }} options={mapOptions}>
       <Polygon
             paths={francePolygon}
             options={{
