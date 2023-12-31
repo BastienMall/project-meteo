@@ -10,7 +10,7 @@ export default function Body() {
 
               <div ></div>
 
-              <div style={{backgroundColor:'white', margin:"15px" , borderRadius:"5px", height:"1500px" }}>
+              <div style={{backgroundColor:'white', margin:"15px" , borderRadius:"5px", height:"1000px" }}>
                   <MapComponent/>
               </div>
 
