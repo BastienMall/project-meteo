@@ -140,7 +140,7 @@ const Map: React.FC = () => {
   const handleMarkerMouseOut = () => {
     setTimeout(() => {
       setSelectedMarker(null);
-    }, 800); // Ajouter un délai de 300 millisecondes avant de fermer l'infobulle
+    }, 1000); // Ajouter un délai de 300 millisecondes avant de fermer l'infobulle
   };
   
 
