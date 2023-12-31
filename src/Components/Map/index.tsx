@@ -66,10 +66,10 @@ const Map: React.FC = () => {
         { lat: 48.8394, lng: 2.4699 },
         // Ajoutez d'autres points pour définir la forme du polygone
       ],
-      strokeColor: '#FF0000', // Couleur du contour
+      // strokeColor: '#FF0000', // Couleur du contour
       strokeOpacity: 0.8,
       strokeWeight: 2,
-      fillColor: '#FF0000', // Couleur de remplissage
+      // fillColor: '#FF0000', // Couleur de remplissage
       fillOpacity: 0.35,
     },
     // Ajoutez d'autres polygones pour les différentes régions
