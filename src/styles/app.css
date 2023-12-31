@@ -1,23 +1,113 @@
+/*-----------------MAP CSS-------------*/
 
-main{
-    color: black;
+.map__image{
+    margin: 2% 0 0 6%;
+    width: 40%;
+    float: left;
+    background-color: #ddd;
+    padding: 60px;
+}
+.map__image path{
+    fill: #8ac863;
+    stroke: #000000;
+    stroke-width: 0.3px;
+    transition: fill 0.3s;
 }
 
-header.header{
-
-    background-color: green;
-    .Grid{
-        display:'grid';
-        grid-template-columns:"20% 60% 20%"
-    }
-
+.map__image path:hover{
+    stroke: #ffffff;
+    stroke-width: 3px;
 }
+.map__list{
+    width: 50%;
+    padding: 40px;
+    background-color:#8ac863 ;
+}
+.map__list a{
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#poi_selector > li .select-container select {
+    height: 50px;
+    border-radius: 5px !important;
+    margin-top: 35px;
+    padding-left: 15px;
+    font-size: 14px;
+    color: #333333;
+    background-color: #fff;
+    cursor: pointer;
+    width: 100%;
+    border: 1px solid #a6a6a6;
+}
+
+/*-----------------FIN MAP CSS-------------*/
+
+
+
+
 
 header{
-    padding: '150px';
-    font-size: large;
+    width: 100%;
 }
 
-div {
-    font-family: "Quicksand"
+#header #header_top .row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+
+#header #header_top .row #header_top_left{
+    margin-right: 15px;
+    display: flex;
+}
+
+.recherche input[type="text"]{
+    height: 45px;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #003661;
+    border: solid 1px #dee2e6;
+    width: 360px;
+    max-width: 100%;
+}
+
+
+
+#header #header_bottom {
+    background-color: #036ba1;
+    position: relative;
+    z-index: 100;
+}
+#barre-favoris #barre-favoris-list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 13%;
+}
+#add-favorite .autocomplete {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#add-favorite .autocomplete span {
+    font-family: "Quicksand",sans-serif;
+    margin-right: 0px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+}
+#add-favorite button {
+    width: 30px;
+    height: 38px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+

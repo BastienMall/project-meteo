@@ -3,21 +3,43 @@ import React from 'react'
 export default function Header() {
 
     return (
-      <>
-        <header>
-          <div style={{display:'grid', gridTemplateColumns:"20% 60% 20%" }}>
-              <div ></div>
-              <div style={{backgroundColor:'white', display:'flex'}}>
-                <img src='../Rep_Public_logo.png' height={'120px'} width={'120px'}/>
-                <img src='../meteo_france_logo_2.png' height={'80px'} width={'90px'} style={{scale:'0.85'}} />
-                <div style={{height:'50px', position:'relative', top:'20px'}}>
-                  <input placeholder='Rechercher une ville, un pays ...' size={40} style={{border:'solid 1px lightgrey', borderRadius:'10px', padding:'15px', position:'relative', left:'100px', fontSize:"14px"}}/>
-                  <img src='../loupe.png' style={{height:'22px', width:'22px'}}/>
+
+
+        <header id="header">
+          
+          <section id='header_top'>
+            <div className="container">
+
+              <div className="row">
+                <div style={{backgroundColor:'white', display:'flex'}} id="header_top_left">
+                  <img src='../Rep_Public_logo.png' height={'120px'} width={'120px'}/>
+                  <img src='../meteo_france_logo_2.png' height={'80px'} width={'90px'} style={{scale:'0.85'}} />
+        
+                  
                   
                 </div>
+
+                <div id="header_top_middle">
+                  <div id="barre_search" style={{height:'50px', position:'relative', top:'20px'}}>
+                    <form className='recherche'>
+                    <input placeholder='Rechercher une ville, un pays ...' size={40} style={{border:'solid 1px lightgrey', borderRadius:'10px', padding:'15px', position:'relative', left:'100px', fontSize:"14px"}}/>
+                    <img src='../loupe.png' style={{height:'22px', width:'22px'}}/>
+                    <button type='submit' title='lancer la recherche' aria-label='lancer la recherche'><i className="fa fa-search"></i></button>
+
+                    </form>
+                  </div>
+                </div>
+
+                <div id="header_top_right">
+                  <div className='icone_bar_right'>text</div>
+
+                </div>
               </div>
-              <div ></div>
-          </div>
+            </div>
+          </section>
+
+
+
 
           <div style={{display:'grid', gridTemplateColumns:"20% 60% 20%" , backgroundColor:"white", position:"initial"}}>
               <div></div>
@@ -48,18 +70,29 @@ export default function Header() {
               <div ></div>
           </div>
 
-          <div style={{display:'grid', gridTemplateColumns:"20% 60% 20%" , backgroundColor:"#036ba1"}}>
-              <div ></div>
-              <div style={{ display:'flex'}}>
-                <div style={{padding:'5px', margin:"5px", color:'white' , fontWeight:'600' , fontSize:'12px'}}>
-                   Ajouter une ville 
+        
+
+          <section id='header_bottom'>
+            <div className="container">
+              <div className="row">
+                <div id="barre-favoris">
+                  <ul id='barre-favoris-list'>
+                    <li className='last'>
+                      <div id="add-favorite">
+                        <div className="autocomplete" style={{padding:'5px', margin:"5px", color:'white' , fontWeight:'600' , fontSize:'12px'}}>
+                          <span>Ajouter une ville</span>
+                         
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div ></div>
-          </div>
+            </div>
+          </section>
         </header>
 
         
-      </>
+ 
     )
   }
