@@ -81,8 +81,8 @@ const Map: React.FC = () => {
   ];
 
   const mapStyles: React.CSSProperties = {
-    height: '80vh',
-    width: '40%',
+    height: '100vh',
+    width: '60%',
     margin: 'auto', // Centre la carte horizontalement
     marginTop : '2%',
     marginBottom : '3%',
@@ -156,7 +156,7 @@ const Map: React.FC = () => {
 
   return (
     <LoadScript googleMapsApiKey="AIzaSyAwjPsWJyl34bEJdPQ9HhHXbWmy1fzvtds">
-      <GoogleMap mapContainerStyle={mapStyles} zoom={5} center={{ lat: 46.603354, lng: 1.888334 }} options={mapOptions}>
+      <GoogleMap mapContainerStyle={mapStyles} zoom={6} center={{ lat: 46.603354, lng: 1.888334 }} options={mapOptions}>
       <Polygon
             paths={francePolygon}
             options={{
@@ -175,7 +175,7 @@ const Map: React.FC = () => {
             position={{ lat: data.lat, lng: data.lng }}
             icon={{
               url: data.icon,
-              scaledSize: new window.google.maps.Size(70, 70),
+              scaledSize: window.google && window.google.maps && window.google.maps.Size ? new window.google.maps.Size(70, 70) : undefined,
             }}
             onMouseOver={() => handleMarkerMouseOver(data)}
             onMouseOut={handleMarkerMouseOut}

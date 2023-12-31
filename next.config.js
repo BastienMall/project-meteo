@@ -1,11 +1,11 @@
-/** @type {import('next').NextConfig} 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig*/
+module.exports = nextConfig
 
-/** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig} 
 const nextConfig = {
   reactStrictMode: true,
   webpack: (config, { isServer }) => {
@@ -27,4 +27,4 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-
+*/
