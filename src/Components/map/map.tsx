@@ -76,10 +76,10 @@ const Map: React.FC = () => {
   ];
 
   const mapStyles: React.CSSProperties = {
-    height: '100vh',
+    height: '80vh',
     width: '40%',
     margin: 'auto', // Centre la carte horizontalement
-    marginTop : '3%',
+    marginTop : '2%',
     marginBottom : '3%',
   };
 
@@ -126,8 +126,9 @@ const Map: React.FC = () => {
           { visibility: 'off' }, // Masquer les routes
         ],
       },
-     
     ],
+    streetViewControl: false, // Désactive le contrôle Pegman (Street View)
+    mapTypeControl: false, // Désactive le contrôle de type de carte (Satellite, etc.)
   };
 
   const handleMarkerMouseOver  = (markerData: WeatherData) => {
