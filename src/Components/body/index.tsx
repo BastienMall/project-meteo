@@ -1,5 +1,5 @@
 import React from 'react'
-import Map from '../Map/map';
+import Map from '../Map/index';
 import Weather from '../api/Weather'
 
 
