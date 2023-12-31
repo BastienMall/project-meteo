@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
-import api_key from "../../../.env"
 
-const Api_key = api_key;
+
+const Api_key = "19dd3a34799e8c44670a4be44379f209";
 
 const Weather = () => {
   const inputRef = useRef(null);

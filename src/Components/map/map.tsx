@@ -77,7 +77,7 @@ const Map: React.FC = () => {
 
   const mapStyles: React.CSSProperties = {
     height: '100vh',
-    width: '40%',
+    width: '70%',
     margin: 'auto', // Centre la carte horizontalement
     marginTop : '3%',
     marginBottom : '3%',
