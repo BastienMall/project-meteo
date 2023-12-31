@@ -147,7 +147,7 @@ const Map: React.FC = () => {
 
   return (
     <LoadScript googleMapsApiKey="AIzaSyAwjPsWJyl34bEJdPQ9HhHXbWmy1fzvtds">
-      <GoogleMap mapContainerStyle={mapStyles} zoom={6} center={{ lat: 46.603354, lng: 1.888334 }} options={mapOptions}>
+      <GoogleMap mapContainerStyle={mapStyles} zoom={5} center={{ lat: 46.603354, lng: 1.888334 }} options={mapOptions}>
       <Polygon
             paths={francePolygon}
             options={{
