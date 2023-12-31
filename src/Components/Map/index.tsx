@@ -158,7 +158,7 @@ const Map: React.FC = () => {
 
   return (
     <LoadScript googleMapsApiKey="AIzaSyAwjPsWJyl34bEJdPQ9HhHXbWmy1fzvtds">
-      <GoogleMap mapContainerStyle={mapStyles} zoom={6} center={{ lat: 46.603354, lng: 1.888334 }} options={mapOptions}>
+      <GoogleMap mapContainerStyle={mapStyles} zoom={8} center={{ lat: 46.603354, lng: 1.888334 }} options={mapOptions}>
 
       {weatherData.map((data) => (
           <Marker
@@ -166,7 +166,7 @@ const Map: React.FC = () => {
             position={{ lat: data.lat, lng: data.lng }}
             icon={{
               url: data.icon,
-              scaledSize: new window.google.maps.Size(50, 50),
+              scaledSize: new window.google.maps.Size(30, 30),
             }}
             onMouseOver={() => handleMarkerMouseOver(data)}
             onMouseOut={handleMarkerMouseOut}
