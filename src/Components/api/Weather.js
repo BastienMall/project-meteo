@@ -77,21 +77,25 @@ const Weather = () => {
   };
 
   return (
-    <div className="bg-gray-800 h-screen grid place-items-center">
-      <div className="bg-white w-96 p-4 rounded-md">
-        <div className="flex items-center justify-between">
+    <div className="bg-gray-800 h-screen grid place-items-center" style={{ height:'250px'}}>
+      <div >
+        <div >
+          <span style={{width:'275px', color:'white',fontSize:'18px',fontWeight:'600',border:'solid 1px black', display:'inline-block', marginLeft:'50%', marginBottom:'25px'}}>
+            Recherchez la météo d'une ville
+          </span>
           <input
             type="text"
             ref={inputRef}
             placeholder="Enter Your Location"
             className="text-xl border-b
           p-1 border-gray-200 font-semibold uppercase flex-1"
+          style={{marginLeft:"100%"}}
           />
           <button onClick={fetchWeather}>
             <img
               src="https://cdn-icons-png.flaticon.com/512/758/758651.png"
               alt="..."
-              className="w-8"
+              style={{height:'50px', width:'50px'}}
             />
           </button>
         </div>

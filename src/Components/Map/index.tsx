@@ -82,12 +82,12 @@ const Map: React.FC = () => {
 
   const mapStyles: React.CSSProperties = {
     position:'relative',
-    right:'180px',
     height: '80vh',
-    width: '65%',
-    margin: 'auto', // Centre la carte horizontalement
-    marginTop : '2%',
+    width: '90%',
+    justifyContent:'flex-start',
+    marginTop : '10%',
     marginBottom : '3%',
+    marginLeft:'2%'
   };
 
   const mapOptions = {
@@ -159,17 +159,6 @@ const Map: React.FC = () => {
   return (
     <LoadScript googleMapsApiKey="AIzaSyAwjPsWJyl34bEJdPQ9HhHXbWmy1fzvtds">
       <GoogleMap mapContainerStyle={mapStyles} zoom={5} center={{ lat: 46.603354, lng: 1.888334 }} options={mapOptions}>
-      {/* <Polygon
-            paths={francePolygon}
-            options={{
-              strokeColor: '#000000', // Couleur du contour
-              strokeOpacity: 0.8,
-              strokeWeight: 2,
-              fillColor: '#FF0000', // Couleur de remplissage
-              fillOpacity: 0.35,
-            }}
-
-      /> */}
 
       {weatherData.map((data) => (
           <Marker

@@ -340,3 +340,16 @@ header{
 
 
 /*-----------------FIN FOOTER CSS-------------*/
+
+/*----------------- BODY CSS-------------*/
+.title_body{
+    color: #145e9a;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    top: 50px;
+    left : 2%
+
+}
+
+/*-----------------FIN BODY CSS-------------*/
