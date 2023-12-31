@@ -1,5 +1,7 @@
 import React from 'react'
 import MapComponent from '../Map/MapComponent';
+import Weather from '../api/Weather'
+
 
 
 export default function Body() {
@@ -10,8 +12,9 @@ export default function Body() {
 
               <div ></div>
 
-              <div style={{backgroundColor:'white', margin:"15px" , borderRadius:"5px", height:"1000px" }}>
+              <div style={{backgroundColor:'white', margin:"15px" , borderRadius:"5px", height:"1500px" }}>
                   <MapComponent/>
+                  <Weather/>
               </div>
 
               <div ></div>

@@ -3,9 +3,9 @@ import Head from 'next/head'
 import axios from 'axios'
 import { useState } from 'react'
 
+
 export default function Home() {
 
-  const url = "https://api.openweathermap.org/data/2.5/weather?q=paris&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}"
   return (
     <>
       <Head>
@@ -17,6 +17,7 @@ export default function Home() {
       </Head>
       <main>
         <PageAccueil/>
+        
       </main>
     </>
   )
