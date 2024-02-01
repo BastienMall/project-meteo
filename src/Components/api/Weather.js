@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
-require('dotenv').config()
 
 
-const Api_key = process.env.REACT_APP_APIKEY ;
+
+const Api_key = "19dd3a34799e8c44670a4be44379f209" ;
 
 
 
