@@ -1,3 +1,4 @@
+import { px } from "framer-motion";
 import { useRef, useState } from "react";
 
 
@@ -83,28 +84,34 @@ const Weather = () => {
   };
 
   return (
-    <div className="right-rectangle" style={{ borderRadius:'10px', height:'250px', backgroundColor:'#e8e8e8', display:'grid', gridTemplateColumns:'20% 60% 20%', padding:'2%'}}>
+    <div className="right-rectangle" style={{ borderRadius:'10px', height:'250px', backgroundColor:'#1c9bd4', display:'flex', justifyContent:'center'}}>
       <div >
         <div >
-          <span style={{width:'275px', color:'#145e9a',fontSize:'18px',fontWeight:'600',border:'solid 1px #145e9a', display:'inline-block', marginLeft:'50%', marginBottom:'25px'}}>
+
+          <span style={{width:'275px', color:'white',fontSize:'18px',fontWeight:'600', display:'inline-block', marginTop:'10px', marginBottom:'25px'}}>
             Recherchez la météo d'une ville
           </span>
-          <input
-            type="text"
-            ref={inputRef}
-            placeholder="Rechercher une ville"
-            className="text-xl border-b
-          p-1 border-gray-200 font-semibold uppercase flex-1"
-          style={{marginLeft:"80%"}}
-          />
-          <button onClick={fetchWeather}>
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/758/758651.png"
-              alt="..."
-              style={{height:'20px', width:'20px'}}
+
+            <input
+              type="text"
+              ref={inputRef}
+              placeholder="Rechercher une ville"
+              className="text-xl border-b
+            p-1 border-gray-200 font-semibold uppercase flex-1"
+            style={{ display:"flex"}}
             />
-          </button>
+
+            <button onClick={fetchWeather}>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/758/758651.png"
+                alt="icone de recherche"
+                style={{height:'25px', width:'25px', display:"flex"}}
+              />
+            </button>
+
+          
         </div>
+
         <div
           className={`duration-300 delay-75  overflow-hidden
          ${showWeather ? "h-[27rem]" : "h-0"}`}
@@ -113,42 +120,43 @@ const Weather = () => {
             <div className="grid place-items-center h-full">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1477/1477009.png"
-                alt="..."
+                alt="iamge de loading"
                 className="w-14 mx-auto mb-2 animate-spin"
               />
             </div>
           ) : (
             showWeather && (
-              <div className="text-center flex flex-col gap-6 mt-10">
+              <div className="text-center flex flex-col gap-6 mt-10" >
                 {apiData && (
-                  <p className="text-xl font-semibold">
+                  <p className="text-xl font-semibold" style={{fontSize:"large", color:'white'}}>
                     {apiData?.name + "," + apiData?.sys?.country}
                   </p>
                 )}
                 <img
                   src={showWeather[0]?.img}
-                  alt="..."
+                  alt="icone météo"
                   className="w-52 mx-auto"
+                  style={{height:'30px',width:'30px', marginBottom:'20px'}}
                 />
-                <h3 className="text-2xl font-bold text-zinc-800">
-                  {showWeather[0]?.type}
-                </h3>
+                
 
                 {apiData && (
                   <>
                     <div className="flex justify-center">
                       <img
                         src="https://cdn-icons-png.flaticon.com/512/7794/7794499.png"
-                        alt="..."
+                        alt="icone température"
                         className="h-9 mt-1"
+                        style={{height:'30px',width:'30px'}}
                       />
-                      <h2 className="text-4xl font-extrabold">
+                      <h2 className="text-4xl font-extrabold" style={{color:'white'}}>
                         {apiData?.main?.temp}&#176;C
                       </h2>
                     </div>
                   </>
                 )}
               </div>
+              
             )
           )}
         </div>
