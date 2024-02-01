@@ -48,32 +48,35 @@ const Weather = () => {
   const fetchWeather = async () => {
     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${inputRef.current.value}&units=metric&appid=${Api_key}`;
     setLoading(true);
-    fetch(URL)
-      .then((res) => res.json())
-      .then((data) => {
-        setApiData(null);
-        if (data.cod == 404 || data.cod == 400) {
-          // ARRAY OF OBJ
-          setShowWeather([
-            {
-              type: "J'ai rien trouvé :)",
-              img: "https://cdn-icons-png.flaticon.com/512/4275/4275497.png",
-            },
-          ]);
-        }
+  
+    try {
+      const response = await fetch(URL);
+      const data = await response.json();
+  
+      setApiData(null);
+  
+      if (data.cod === 404 || data.cod === 400) {
+        setShowWeather([
+          {
+            type: "J'ai rien trouvé :)",
+            img: "https://cdn-icons-png.flaticon.com/512/4275/4275497.png",
+          },
+        ]);
+      } else {
         setShowWeather(
           WeatherTypes.filter(
             (weather) => weather.type === data.weather[0].main
           )
         );
-        console.log(data);
-        setApiData(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setLoading(false);
-      });
+      }
+  
+      console.log(data);
+      setApiData(data);
+      setLoading(false);
+    } catch (err) {
+      console.error(err);
+      setLoading(false);
+    }
   };
 
   return (
