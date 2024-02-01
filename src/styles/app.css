@@ -62,9 +62,6 @@ header{
     filter: var(--hover_black);
 }
 
-
-
-
 .div_icon_reseaux{
     position: relative;
     top:45px;
@@ -118,42 +115,40 @@ header{
     font-weight:800;
 
 
-    .icon{
-        display:inline-flex ;
-        height:17px ;
-        width:17px;
-}
+        .icon{
+            display:inline-flex ;
+            height:17px ;
+            width:17px;
+        }
 
-    .icon_down{
-        display: inline-flex;
-        height:17px ;
-        width:17px;
-        position: relative;
-        top: 2px;
-        left: 2px;
-    }
+        .icon_down{
+            display: inline-flex;
+            height:17px ;
+            width:17px;
+            position: relative;
+            top: 2px;
+            left: 2px;
+        }
 
-    .libelle{
-        display: flexbox;
-        margin-left: 15px ;
-        position:relative;
-        bottom: 2px
-    }
+        .libelle{
+            display: flexbox;
+            margin-left: 15px ;
+            position:relative;
+            bottom: 2px
+        }
 
 
-     #burger_menu{
-        height:25px ;
-        width:25px;
-        position:relative;
-        left: 50%;
-        filter: invert(20%) sepia(98%) saturate(5013%) hue-rotate(312deg) brightness(83%) contrast(112%);
-    }
+        #burger_menu{
+            height:25px ;
+            width:25px;
+            position:relative;
+            left: 50%;
+            filter: invert(20%) sepia(98%) saturate(5013%) hue-rotate(312deg) brightness(83%) contrast(112%);
+        }
 
-    
-
-    #burger_menu:hover{
-        filter: var(--hover_black);
-    }
+        #burger_menu:hover{
+            filter: var(--hover_black);
+        }
 }
 
 
@@ -192,6 +187,7 @@ header{
     position: relative;
     z-index: 100;
 }
+
 #barre-favoris #barre-favoris-list {
     display: flex;
     align-items: center;
@@ -199,11 +195,13 @@ header{
     margin-left: 13%;
     list-style-type: none;
 }
+
 #add-favorite .autocomplete {
     position: relative;
     display: inline-flex;
     grid-template-columns: var(--grid_template);
 }
+
 #add-favorite .autocomplete span {
     padding:'5px'  ;
     font-family: var(--font);
@@ -212,6 +210,7 @@ header{
     font-weight: 600;
     color: #ffffff;
 }
+
 #add-favorite button {
     width: 20px;
     height: 20px;
@@ -325,8 +324,6 @@ header{
     filter: var(--hover_pink);
 }
 
-
-
 .rubrique  {
     display: flex;
     margin-top: 25px;
@@ -338,30 +335,25 @@ header{
     font-size: 15px;
     width: 110%;
     
-    
+        .right_arrow{
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            filter: invert(13%) sepia(97%) saturate(6847%) hue-rotate(317deg) brightness(89%) contrast(101%);
+            margin-right: 5px;
 
-    .right_arrow{
-        display: inline-block;
-        height: 10px;
-        width: 10px;
-        filter: invert(13%) sepia(97%) saturate(6847%) hue-rotate(317deg) brightness(89%) contrast(101%);
-        margin-right: 5px;
+        }
 
-    }
+        .libelle{
+            display: inline-block;
+            position:relative;
+            margin-right: 5px;
+        }
 
-    .libelle{
-        display: inline-block;
-        position:relative;
-        margin-right: 5px;
-    }
-
-    .libelle:hover{
-        filter: var(--hover_pink);
-    }
+        .libelle:hover{
+            filter: var(--hover_pink);
+        }
 }
-
-
-
 
 /*-----------------FIN FOOTER CSS-------------*/
 
