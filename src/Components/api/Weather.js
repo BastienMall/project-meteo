@@ -1,7 +1,10 @@
 import { useRef, useState } from "react";
+require('dotenv').config()
 
 
-const Api_key = process.env.api_key;
+const Api_key = process.env.REACT_APP_APIKEY ;
+
+
 
 const Weather = () => {
   const inputRef = useRef(null);
