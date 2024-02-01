@@ -3,6 +3,10 @@
 
 :root{
     --font: "Quicksand",sans-serif;
+    --hover_black:invert(9%) sepia(84%) saturate(3909%) hue-rotate(194deg) brightness(95%) contrast(102%);
+    --hover_pink :invert(15%) sepia(92%) saturate(7105%) hue-rotate(316deg) brightness(88%) contrast(103%);
+    --grid_template : "20% 60% 20%";
+    --transition : 350ms ; 
 }
 
 /*-----------------Fin Variable CSS-------------*/
@@ -27,7 +31,7 @@ header{
 
 #header #header_top .row{
     display: grid;
-    grid-template-columns: "20% 60% 20%";
+    grid-template-columns: var(--grid_template);
 
 }
 
@@ -55,7 +59,7 @@ header{
 }
 
 .icon_research:hover{
-    filter: invert(9%) sepia(84%) saturate(3909%) hue-rotate(194deg) brightness(95%) contrast(102%);
+    filter: var(--hover_black);
 }
 
 
@@ -73,15 +77,15 @@ header{
 }
 
 #facebook:hover{
-    filter: invert(15%) sepia(92%) saturate(7105%) hue-rotate(316deg) brightness(88%) contrast(103%);
+    filter: var(--hover_pink);
 }
 
 #twitter:hover{
-    filter: invert(13%) sepia(95%) saturate(6762%) hue-rotate(316deg) brightness(88%) contrast(103%);
+    filter: var(--hover_pink);
 }
 
 #linkedin:hover{
-    filter: invert(13%) sepia(95%) saturate(6762%) hue-rotate(316deg) brightness(88%) contrast(103%);
+    filter: var(--hover_pink);
 }
 
 #bell{
@@ -148,39 +152,39 @@ header{
     
 
     #burger_menu:hover{
-        filter: invert(9%) sepia(84%) saturate(3909%) hue-rotate(194deg) brightness(95%) contrast(102%);
+        filter: var(--hover_black);
     }
 }
 
 
 #prevision:hover {
-    transition: 350ms;
-    filter: invert(13%) sepia(95%) saturate(6762%) hue-rotate(316deg) brightness(88%) contrast(103%);
+    transition: var(--transition);
+    filter: var(--hover_pink);
 }
 
 #meteo_marine:hover {
-    transition: 350ms;
-    filter: invert(13%) sepia(95%) saturate(6762%) hue-rotate(316deg) brightness(88%) contrast(103%);
+    transition: var(--transition);
+    filter: var(--hover_pink);
 }
 
 #meteo_montagne:hover {
-    transition: 350ms;
-    filter: invert(13%) sepia(95%) saturate(6762%) hue-rotate(316deg) brightness(88%) contrast(103%);
+    transition: var(--transition);
+    filter: var(--hover_pink);
 }
 
 #climat:hover {
-    transition: 350ms;
-    filter: invert(13%) sepia(95%) saturate(6762%) hue-rotate(316deg) brightness(88%) contrast(103%);
+    transition: var(--transition);
+    filter: var(--hover_pink);
 }
 
 #actus_dossiers:hover {
-    transition: 350ms;
-    filter: invert(13%) sepia(95%) saturate(6762%) hue-rotate(316deg) brightness(88%) contrast(103%);
+    transition: var(--transition);
+    filter: var(--hover_pink);
 }
 
 #services:hover {
-    transition: 350ms;
-    filter: invert(13%) sepia(95%) saturate(6762%) hue-rotate(316deg) brightness(88%) contrast(103%);
+    transition: var(--transition);
+    filter: var(--hover_pink);
 }
 
 #header #header_bottom {
@@ -198,7 +202,7 @@ header{
 #add-favorite .autocomplete {
     position: relative;
     display: inline-flex;
-    grid-template-columns: "20% 60% 20%";
+    grid-template-columns: var(--grid_template);
 }
 #add-favorite .autocomplete span {
     padding:'5px'  ;
@@ -223,13 +227,25 @@ header{
 
 /*-----------------FIN HEADER CSS-------------*/
 
+/*----------------- BODY CSS-------------*/
+.title_body{
+    color: #145e9a;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    top: 50px;
+    left : 2%
+
+}
+
+/*-----------------FIN BODY CSS-------------*/
 
 /*-----------------FOOTER CSS-------------*/
 
 
 .grid{
     display: grid ;
-    grid-template-columns: 20% 60% 20% ;
+    grid-template-columns: var(--grid_template) ;
     background-image: linear-gradient(to bottom,#0076c9 0%,#1c9bd4 100%);
     padding: 2%;
     font-family: var(--font);
@@ -306,7 +322,7 @@ header{
 }
 
 .bouton:hover  {
-    filter: invert(13%) sepia(97%) saturate(6847%) hue-rotate(317deg) brightness(89%) contrast(101%);
+    filter: var(--hover_pink);
 }
 
 
@@ -340,7 +356,7 @@ header{
     }
 
     .libelle:hover{
-        color: #db0084;
+        filter: var(--hover_pink);
     }
 }
 
@@ -349,15 +365,3 @@ header{
 
 /*-----------------FIN FOOTER CSS-------------*/
 
-/*----------------- BODY CSS-------------*/
-.title_body{
-    color: #145e9a;
-    font-size: 18px;
-    font-weight: bold;
-    position: relative;
-    top: 50px;
-    left : 2%
-
-}
-
-/*-----------------FIN BODY CSS-------------*/
