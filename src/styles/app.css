@@ -19,24 +19,24 @@ header{
     font-family: var(--font);
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%
-  }
-  
-  .sticky + header {
-    padding-top: 102px;
-  }
 
-#header #header_top .row{
-    display: grid;
-    grid-template-columns: var(--grid_template);
-
+#header_top_left{
+    display: flex;
 }
 
-#header #header_top .row #header_top_left{
-    display: flex;
+
+@media screen and (max-width: 1245px){
+    #header_top{
+        scale: 0.8;
+        margin-left: -150px;
+    }
+
+    
+}
+
+#barre_search{
+    position:relative;
+    height:'50px', 
 }
 
 .input_research{

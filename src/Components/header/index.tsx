@@ -1,28 +1,7 @@
-import { grid } from '@chakra-ui/react'
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 export default function Header() {
 
-
-  // Essai d'implémenter un header sticky, restant affiché lors du scrolling
-  // const [isSticky, setSticky] = useState(false);
-  //   const handleScroll = () => {
-  //   const windowScrollTop = window.scrollY;
-
-  //   if (windowScrollTop > 10) {
-  //     setSticky(true);
-  //   } else {
-  //     setSticky(false);
-  //   }
-  //   };
-    
-  //   useEffect(() => {
-  //     window.addEventListener('scroll', handleScroll);
-    
-  //     return () => {
-  //       window.removeEventListener('scroll', handleScroll);
-  //     };
-  //   }, []);
 
     return (
 
@@ -41,7 +20,7 @@ export default function Header() {
                   <img src='../meteo_france_logo_2.png' height={'80px'} width={'90px'} style={{scale:'0.85'}} />
 
                   <div id="header_top_middle">
-                    <div id="barre_search" style={{height:'50px', position:'relative' }}>
+                    <div id="barre_search" >
                       <form className='recherche'>
                         <input placeholder='Rechercher une ville, un pays ...' className="input_research" size={40} />
                         <img src='../loupe.png' className='icon_research'/>
