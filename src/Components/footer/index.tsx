@@ -79,66 +79,66 @@ export default function Footer() {
           <div className='button_reseaux'>
             <div>
               <button className='bouton'>
-                <img className='icon_bouton' src='../facebook(1).png'/>
+                <img className='icon_bouton' alt='Icone de facebook' src='../facebook(1).png'/>
               </button>
             </div>
             <div>
               <button className='bouton' >
-                <img className='icon_bouton' src='../twitter(1).png' style={{scale:'0.5'}}/>
+                <img className='icon_bouton' alt="Icone de twitter" src='../twitter(1).png' style={{scale:'0.5'}}/>
               </button>
             </div>
             <div>
               <button className='bouton'>
-                <img className='icon_bouton' src='../linkedin-logo.png' style={{scale:'0.5'}}/>
+                <img className='icon_bouton' alt='Icone de linkedin' src='../linkedin-logo.png' style={{scale:'0.5'}}/>
               </button>
             </div>
             <div>
               <button className='bouton'>
-                <img className='icon_bouton' src='../instagram(1).png' style={{scale:'0.5'}}/>
+                <img className='icon_bouton' alt="Icone d'Instagram" src='../instagram(1).png' style={{scale:'0.5'}}/>
               </button>
             </div>
             <div>
               <button className='bouton'>
-                <img className='icon_bouton' src='../youtube(1).png'/>
+                <img className='icon_bouton' alt="Icone de youtube" src='../youtube(1).png'/>
               </button>
             </div>
             </div>
 
             <div className='rubrique'>
               <div>
-                <img className="right_arrow" src='../right-arrow.png'/>
-                <div className='libelle' >Légende</div>
+                <img className="right_arrow" alt="Légendes" src='../right-arrow.png'/>
+                <div className='libelle'  >Légende</div>
               </div>
               <div>
-                <img className="right_arrow" src='../right-arrow.png'/>
+                <img className="right_arrow" alt='Mentions Légales' src='../right-arrow.png'/>
                 <div className='libelle' >Mentions Légales</div>
               </div>
               <div>
-                <img className="right_arrow" src='../right-arrow.png'/>
+                <img className="right_arrow" alt='Gestion des cookies' src='../right-arrow.png'/>
                 <div className='libelle'>Gestion des Cookies</div>
               </div>
               <div>
-                <img className="right_arrow" src='../right-arrow.png'/>
+                <img className="right_arrow" alt='Politique de confidentialité' src='../right-arrow.png'/>
                 <div className='libelle'>Politique de Confidentialité</div>
               </div>
               <div>
-                <img className="right_arrow" src='../right-arrow.png'/>
+                <img className="right_arrow" alt='Droit de Reproduction' src='../right-arrow.png'/>
                 <div className='libelle'>Droits de Reproduction</div>
               </div>
               <div>
-                <img className="right_arrow" src='../right-arrow.png'/>
+                <img className="right_arrow"  alt="Consentement" src='../right-arrow.png'/>
                 <div className='libelle'>Consentement</div>
               </div>
               <div>
-                <img className="right_arrow" src='../right-arrow.png'/>
+                <img className="right_arrow" alt='Accessibilité' src='../right-arrow.png'/>
                 <div className='libelle' >Accessibilité</div>
               </div>
               <div>
-                <img className="right_arrow" src='../right-arrow.png'/>
+                <img className="right_arrow" alt='Autres Sites' src='../right-arrow.png'/>
                 <div className='libelle' >Autres Sites</div>
               </div>
               <div>
-                <img className="right_arrow" src='../right-arrow.png'/>
+                <img className="right_arrow" alt='Contact' src='../right-arrow.png'/>
                 <div className='libelle'>Contact</div>
               </div>
           
@@ -147,8 +147,8 @@ export default function Footer() {
           
 
         <div style={{backgroundColor:'white', display:'flex', padding:'1%', justifyContent:'center'}} >
-          <img src='../Rep_Public_logo.png' height={'120px'} width={'120px'}/>
-          <img src='../meteo_france_logo_2.png' height={'80px'} width={'90px'} style={{scale:'0.8'}} />
+          <img src='../Rep_Public_logo.png' alt='Logo de la République Française' height={'120px'} width={'120px'}/>
+          <img src='../meteo_france_logo_2.png' alt='Logo de Météo France' height={'80px'} width={'90px'} style={{scale:'0.8'}} />
         </div>
         <div style={{backgroundColor:'#145e9a', paddingTop:"1%", paddingBottom:"1%" ,color:"white", display:'flex', justifyContent:'center',fontFamily: "Quicksand",fontWeight:'600'}} >
             @ 2023 Copyright - Météo France

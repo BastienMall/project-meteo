@@ -16,14 +16,14 @@ export default function Header() {
                 <div ></div>
 
                 <div id="header_top_left" >
-                  <img src='../Rep_Public_logo.png' height={'120px'} width={'120px'}/>
-                  <img src='../meteo_france_logo_2.png' height={'80px'} width={'90px'} style={{scale:'0.85'}} />
+                  <img src='../Rep_Public_logo.png' alt="Logo de la République Française" height={'120px'} width={'120px'}/>
+                  <img src='../meteo_france_logo_2.png' alt="Logo de Météo France" height={'80px'} width={'90px'} style={{scale:'0.85'}} />
 
                   <div id="header_top_middle">
                     <div id="barre_search" >
                       <form className='recherche'>
                         <input placeholder='Rechercher une ville, un pays ...' className="input_research" size={40} />
-                        <img src='../loupe.png' className='icon_research'/>
+                        <img src='../loupe.png' alt='Icone de recherche' className='icon_research'/>
                         <button type='submit' title='lancer la recherche' aria-label='lancer la recherche'><i className="fa fa-search"></i></button>
 
                       </form>
@@ -32,12 +32,12 @@ export default function Header() {
 
                 <div id="header_top_right">
                   <div  className="div_icon_reseaux" style={{ display:"grid", gridTemplateColumns:'repeat(3,25px)', gap:'20px'}}>
-                   <img src='../facebook(1).png' id='facebook' className="icon_reseaux" />
-                   <img src='../twitter(1).png' id='twitter' className="icon_reseaux" />
-                   <img src='../linkedin-logo.png' id='linkedin' className="icon_reseaux" />
+                   <img src='../facebook(1).png' id='facebook' alt='Icone de facebook' className="icon_reseaux" />
+                   <img src='../twitter(1).png' id='twitter' alt='Icone de twitter' className="icon_reseaux" />
+                   <img src='../linkedin-logo.png' id='linkedin' alt='Icone de linkedin' className="icon_reseaux" />
                   </div>
 
-                  <img src='../bell.png' id='bell'  />
+                  <img src='../bell.png' id='bell' alt='Icone de notification' />
                 </div>
 
               </div>
@@ -59,39 +59,39 @@ export default function Header() {
                 <div id='header_middle_middle' style={{ display:'grid' , gridTemplateColumns:'1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 0.5fr '}}>
 
                   <a href='/' id='prevision' className='onglet' >
-                    <img className='icon'  src='../meteo.png' />
+                    <img className='icon'  alt="Icone des prévisions" src='../meteo.png' />
                     <text className="libelle" >PREVISIONS</text>
                   </a>
 
                   <a href='/meteo-marine' id='meteo_marine' className='onglet' >
-                    <img className='icon'  src='../vagues.png' />
+                    <img className='icon' alt='Icone de la météo marine' src='../vagues.png' />
                     <text className="libelle" >METEO MARINE</text>
                   </a>
 
                   <a href='/meteo-montagne' id='meteo_montagne'className='onglet' >
-                    <img className='icon'  src='../montagnes-enneigees.png' />
+                    <img className='icon' alt='Icone de la météo des montagnes'  src='../montagnes-enneigees.png' />
                     <text className="libelle" >METEO MONTAGNE</text>
                   </a>
 
                   <a href='/climat' id='climat' className='onglet' >
-                    <img className='icon'  src='../globe.png' />
+                    <img className='icon' alt='Icone du climat' src='../globe.png' />
                     <text className="libelle" >CLIMAT</text>
                     <img className='icon_down' src='../down.png' />
                   </a>
 
                   <a href='/actualites-et-dossiers' id='actus_dossiers' className='onglet' >
-                    <img className='icon' src='../article.png' />
+                    <img className='icon' alt="Icone des actualités" src='../article.png' />
                     <text className="libelle" >ACTUS & DOSSIERS</text>
                     <img className='icon_down' src='../down.png' />
                   </a>
 
                   <a href='https://services.meteofrance.com/' id='services' className='onglet' >
-                    <img className='icon' src='../la-personne.png' />
+                    <img className='icon' alt='Icone de nos services' src='../la-personne.png' />
                     <text className="libelle" >NOS SERVICES</text>
                   </a>
 
                   <a  className='onglet' >
-                    <img id='burger_menu'src='../menu.png' />
+                    <img id='burger_menu'src='../menu.png' alt='Icone du Menu'/>
                   </a>
 
                 </div>
@@ -110,7 +110,7 @@ export default function Header() {
                           <div className="autocomplete" style={{padding:'5px', margin:"5px", color:'white' , fontWeight:'600' , fontSize:'12px'}}>
                             <span>Ajouter une ville</span>
                             <button>
-                              <img src="../plus.png"  />
+                              <img src="../plus.png"  alt="Icone d'Ajout d'une ville "/>
                             </button>
                           </div>
                           <div></div>
